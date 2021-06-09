@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('./partials/head.ejs')%>
+<body>
+   
+    <nav class="navbar1">
+        <h3>Movies</h3>
+        <p>Welcome</p>
+    <ul>
+        <li><a href="/logout">Logout</a></li>
+    </ul>
+    </nav>   
+    <div class="blogs content">
+        <h2>All Movies</h2>
+        <% if(movies.length>0){%>
+            <% movies.forEach(movie=>{%>
+               <a class="single" href="/movies/<%= movie._MovieID%>">
+                <h3 class="title"><%= movie.Title %></h3>
+                <p class="genre"><%= movie.Genre %></p>
+               </a>
+            <%})%>
+        <%} else {%>
+            <p>There is no blogs to display....</p>
+            <%}%>
+    </div>
+    <%- include('./partials/footer.ejs') %>
+</body>
+</html>

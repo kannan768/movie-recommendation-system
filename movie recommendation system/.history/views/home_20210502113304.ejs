@@ -1,0 +1,58 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('./partials/head.ejs')%>
+<body>
+
+    <nav class="navbar1">
+        <h3>HOME</h3>
+        <p><b>WELCOME TO MOVIE BUFF</b></p>
+    <ul>
+        <li><a href="/logout">Logout</a></li>
+    </ul>
+    </nav>   
+    <h1>Welcome to Movie Recomender</h1><br><br>
+    
+            <!-- <% data.forEach(function(str){ %>
+              <div class="card ">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-YoxA3KpeRA9Y5rcdcBv8tQDIxdR4iPHvtw&usqp=CAU" alt="Movie" style="width:150px;height:150px;align-items: center"/>
+                <div class="container">
+                  <h4><b><%=str%></b></h4> 
+                  <% var movieid=str.substring(0,5);%> 
+                    <h4><%=movieid%></p>
+                  <!-- <!-- <p>Architect & Engineer</p>  -->
+            
+             </div>
+            </div>
+     
+            <% }) %> -->
+            
+    <div class="card-deck">
+        <div class="card">
+          <img src="..." class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="..." class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="..." class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+          </div>
+        </div>
+      </div>
+    <%- include('./partials/footer.ejs') %>
+</body>
+</html>

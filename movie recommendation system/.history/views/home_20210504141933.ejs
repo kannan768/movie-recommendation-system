@@ -1,0 +1,43 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('./partials/head.ejs')%>
+<body>
+
+    <nav class="navbar1">
+        <h3>HOME</h3>
+        <p><b>WELCOME TO MOVIE BUFF</b></p>
+    <ul>
+        <li><a href="/logout">Logout</a></li>
+    </ul>
+    </nav>   
+    <h1>Welcome to Movie Recomender</h1><br><br>
+    <div class="row">
+        <% data.forEach(function(str){ %>
+        <div class="column">
+          <div class="card">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-YoxA3KpeRA9Y5rcdcBv8tQDIxdR4iPHvtw&usqp=CAU" alt="Movie"/>
+           <div class="container">
+            <h4><b><%=str%></b></h4> 
+            <% var movieid=str.substring(0,5).trim();%>
+            <p><%=movieid%></p>
+            <form onsubmit="update">
+                <label for="userrating">Rate here:</label>
+                <select id="userrating" name="userrating">
+                  <option value="5">5</option>
+                  <option value="4">4</option>
+                  <option value="3">3</option>
+                  <option value="2">2</option>
+                  <option value="1">1</option>
+                </select> 
+                <input type="submit">
+            </form>
+                
+           </div>
+          </div>
+        </div>
+        <% }) %>
+    </div>
+    <%- include('./partials/footer.ejs') %>
+</body>
+</html>

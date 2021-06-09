@@ -1,0 +1,44 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('./partials/head.ejs')%>
+<body>
+
+    <nav class="navbar1">
+        <h3>HOME</h3>
+        <p><b>WELCOME TO MOVIE BUFF</b></p>
+    <ul>
+        <li><a href="/logout">Logout</a></li>
+    </ul>
+    </nav>   
+    <h1>Welcome to Movie Recomender</h1><br><br>
+    <div class="row">
+        <% data.forEach(function(str){ %>
+        <div class="column">
+          <div class="card">
+            <img src="https://cdn2.iconfinder.com/data/icons/circle-icons-1/64/video-128.png" alt="Movie"/>
+           <div class="container">
+            <h4><b><%=str.substring(5,str.length).trim()%></b></h4> 
+            <% var movieid=str.substring(0,5).trim();%>
+            <!-- <p><%=movieid%></p> -->
+            <form onchange="/user/<%=movieid%>" method="POST">
+                <label for="userrating">Rate here:</label>
+                <select id="userrating" name="userrating">
+                  <option value="5">5</option>
+                  <option value="4">4</option>
+                  <option value="3">3</option>
+                  <option value="2">2</option>
+                  <option value="1">1</option>
+                </select> 
+                <button>Submit</button>
+            </form>
+                <!-- <a href="/user/<%=movieid%>"><input type="submit"></a> -->
+                
+           </div>
+          </div>
+        </div>
+        <% }) %>
+    </div>
+    <%- include('./partials/footer.ejs') %>
+</body>
+</html>

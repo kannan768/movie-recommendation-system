@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('./partials/head.ejs')%>
+<body>
+
+    <%- include('./partials/nav.ejs')%>
+    
+    <div class="front_page">
+        <form action="/user/register" method="POST">
+            <label for="UserID">User ID:</label>
+            <input type="text" id="UserID" name="UserID" required>
+            <label for="Gender">Gender :</label>
+            <input type="text" id="Gender" name="Gender" required>
+            <label for="Age">Age :</label>
+            <input type="text" id="Age" name="Age" required>
+            <label for="Phone">Phone :</label>
+            <input type="text" id="Phone" name="Phone" required>
+            <label for="Password">Password :</label>
+            <input type="text" id="Password" name="Password" required>
+            
+
+            <button>Register</button>
+        </form>
+    </div>
+    <%- include('./partials/footer.ejs') %>
+</body>
+</html>

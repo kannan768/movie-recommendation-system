@@ -1,0 +1,40 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('./partials/head.ejs')%>
+<body>
+
+    <nav class="navbar1">
+        <h3>HOME</h3>
+        <p>WELCOME</p>
+    <ul>
+        <li><a href="/logout">Logout</a></li>
+    </ul>
+    </nav>   
+    <h1>Welcome to Movie Recomender</h1>
+
+        <ul>
+        <% data.forEach(function(str){ %>
+          <!-- <div class="front_page"> 
+            <li><%= str %></li>
+          </div> -->
+          <div class="card">
+            <img src="reelpic.png" alt="Movie" style="width:50%">
+            <div class="container">
+              <h4><b>str</b></h4> 
+              <!-- <p>Architect & Engineer</p>  -->
+            </div>
+          </div>
+            
+        <% }) %>
+      </ul>
+    <!-- <div class="front_page">
+
+        
+
+        <p><%=data%></p>
+ 
+    </div> -->
+    <%- include('./partials/footer.ejs') %>
+</body>
+</html>
