@@ -18,17 +18,23 @@ the System.
 SOFTWARES USED
 
 • Visual Studio Code:
+
 •MongoDB compass:
+
 •Spyder-IDE
 
  Backend Technologies:
  
 • Python Version (2,7,2.8)
+
 • Anaconda (Spyder Ide)
+
 • pytorch
 
  Requirements:
  
 • OPERATING SYSTEM: windows 10
+
 • PROCESSOR INTEL: CORE i3
+
 • DISK STORAGE :3Gb
